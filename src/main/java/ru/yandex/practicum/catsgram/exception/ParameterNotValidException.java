@@ -9,7 +9,11 @@ public class ParameterNotValidException extends IllegalArgumentException {
         this.reason = reason;
     }
 
-    public String getParameter() { return parameter; }
+    public String getParameter() {
+        return parameter;
+    }
 
-    public String getReason() { return reason; }
+    public String getReason() {
+        return reason;
+    }
 }

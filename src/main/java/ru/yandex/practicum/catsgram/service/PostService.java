@@ -60,9 +60,11 @@ public class PostService {
         if (post.getDescription() == null || post.getDescription().isBlank()) {
             throw new ConditionsNotMetException("Описание не может быть пустым");
         }
+/*
         if (userService.findById(post.getAuthorId()).isEmpty()) {
             throw new ConditionsNotMetException(String.format("Автор с id=%d не найден", post.getAuthorId()));
         }
+*/
         post.setId(getNextId());
         post.setPostDate(Instant.now());
         posts.put(post.getId(), post);
